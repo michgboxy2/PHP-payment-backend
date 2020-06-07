@@ -1,10 +1,10 @@
 <?php 
   class Database {
     // DB Params
-    private $host = 'localhost';
-    private $db_name = 'payment';
-    private $username = 'root';
-    private $password = 'root';
+    private $host = 'us-cdbr-east-05.cleardb.net';
+    private $db_name = 'heroku_cd971134c384a0d';
+    private $username = 'be801e4f2ba5b9';
+    private $password = '4fbaa96d';
     private $conn;
 
     // DB Connect
