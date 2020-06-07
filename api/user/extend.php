@@ -59,7 +59,7 @@
       die();
     }
   
-     //validate name input
+     //validate name input//
      $validateFirstName = $data->firstName;
       if (!preg_match("/^[a-zA-Z ]*$/",$validateFirstName)) {
           $firstNameErr = "Only letters and white space allowed for first name";
