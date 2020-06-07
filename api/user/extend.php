@@ -13,16 +13,17 @@
   //Instantiate User register object
   $user = new User($db);
 
-    //GET email
-  // $user->email = isset($_GET['email']) ? $_GET['email'] : die();
 
-  $data = json_decode(file_get_contents("php://input"));
+  $dataArray = json_decode(file_get_contents("php://input"));
+
+  $data = $dataArray->data->metadata->custom_fields[0];
 
   if(empty($data->email)){
     echo "Email is required";
         die();
-  }
+  };
 
+  //GET EMAIL
   $user->email = $data->email;
 
   //User post query
