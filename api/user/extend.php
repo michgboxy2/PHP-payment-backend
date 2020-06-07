@@ -14,9 +14,16 @@
   $user = new User($db);
 
     //GET email
-  $user->email = isset($_GET['email']) ? $_GET['email'] : die();
+  // $user->email = isset($_GET['email']) ? $_GET['email'] : die();
 
   $data = json_decode(file_get_contents("php://input"));
+
+  if(empty($data->email)){
+    echo "Email is required";
+        die();
+  }
+
+  $user->email = $data->email;
 
   //User post query
   $result = $user->checKiFuserExist();
